@@ -1,9 +1,12 @@
+import {Link} from 'react-router-dom';
+
 export default function Navbar() {
     return (
         <nav className="NavBar">
-            <a href="/about" className="aboutpage">About</a>
-            <a href="/projects" className="projectspage">Projects</a>
-            <a href="/connect" className="connectpage">Connect</a>
+            <Link to ="/">Home</Link>
+            <Link to ="/about">About</Link>
+            <Link to ="/projects">Projects</Link>
+            <Link to ="/contact">Contact</Link>
         </nav>
     )
 }
