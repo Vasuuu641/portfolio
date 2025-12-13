@@ -5,7 +5,7 @@ function Home()
 {
     return (
         
-        <section id="home">
+        <section className="Home" id="home">
 
             < Navbar />
 
