@@ -7,7 +7,6 @@ function App() {
       <main>
         <Home />
         
-        
       </main>
     
     </div>
