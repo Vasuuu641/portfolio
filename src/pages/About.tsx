@@ -14,6 +14,18 @@ function About()
                 frameworks, and gradually refining my code to be more efficient, modular, and scalable. As I grow as a developer, 
                 I’m eager to work on software that blends thoughtful design with solid engineering.
             </p>
+            
+            <h4>Technical Skills</h4>
+            <Button text="TypeScript"/>
+            <Button text="React"/>
+            <Button text="Node.js"/>
+            <Button text="JavaScript"/>
+            <Button text="MySQL"/>
+            <Button text="Python"/>
+            <Button text="C"/>
+            <Button text="Git"/>
+            <Button text="HTML & CSS"/>
+
         </section>
     )
 }
