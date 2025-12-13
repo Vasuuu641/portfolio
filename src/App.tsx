@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Connect from './pages/Connect';
 import Home from './pages/Home';
 
+
 function App() {
   return (
     <div className="Portfolio Main Page">
