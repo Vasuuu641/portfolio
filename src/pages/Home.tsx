@@ -9,6 +9,8 @@ function Home()
 
             < Navbar />
 
+            <p>Available for new opportunities</p>
+
             <h1>Hi, I'm Vasundhara Ravikumar</h1>
             <h2>Aspiring Software Engineer</h2>
             <p>Passionate software engineer with expertise 
