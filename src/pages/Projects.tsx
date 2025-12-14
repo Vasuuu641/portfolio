@@ -5,7 +5,7 @@ function Projects() {
 
   return (
 
-    <div className="Projects">
+    <div className="Projects" id = "projects">
 
       <h1>Featured Projects</h1>
       <h4>Here are some of my recent works showcasing my skills in full-stack development</h4>

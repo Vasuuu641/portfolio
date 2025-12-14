@@ -1,26 +1,20 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Routes } from 'react-router-dom';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Connect from './pages/Connect';
 import Home from './pages/Home';
+import Navbar from './components/Navbar';
 
 
 function App() {
   return (
     <div className="Portfolio Main Page">
       <main>
-        <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/connect" element={<Connect />} />
-        </Routes>
-
-        </BrowserRouter>
-
+        < Navbar />
+        < Home />
+        < About />
+        < Projects />
+        < Connect />
       </main>
     
     </div>

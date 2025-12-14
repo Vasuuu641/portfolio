@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+
 import Button from "../components/Button";
 
 function Home()
@@ -6,8 +6,6 @@ function Home()
     return (
         
         <section className="Home" id="home">
-
-            < Navbar />
 
             <p>Available for new opportunities</p>
 
@@ -17,8 +15,13 @@ function Home()
             in building scalable web applications and solving complex problems. I love 
             creating efficient, user-friendly solutions that make a difference.</p>
 
+           <a href = "#projects">
             < Button text="View My Projects"/>
+           </a>
+
+           <a href = "/Vasundhara_Resume.pdf" download>
             <Button text="Download my Resume"/>
+           </a>
         </section>
     )
 

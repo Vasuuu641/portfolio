@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar";
+
 import Button from "../components/Button";
 
 function About()
 {
     return(
         <section className="About" id="about">
-            <Navbar />
+
             <h1>About Me</h1>
             <p>I’m a Computer Science and Engineering student with a strong interest 
                 in building practical, user-focused software. I enjoy working on full-stack 
