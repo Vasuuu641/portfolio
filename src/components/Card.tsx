@@ -15,8 +15,8 @@ export default function ProjectCard(props : ProjectCardProps)
             <div className = "Description">{props.description}</div>
             <div className = "TechStack">{props.techStack.join(", ")}</div>
             <div className = "Links">
-                <a href={props.projectURL} target="_blank" rel="noopener noreferrer">Live Project</a>
-                <a href={props.githubURL} target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                <a href={props.projectURL} target="_blank" rel="noopener noreferrer">View</a>
+                <a href={props.githubURL} target="_blank" rel="noopener noreferrer">Git</a>
             </div>
             
         </div>

@@ -11,29 +11,29 @@ function Projects() {
       <h4>Here are some of my recent works showcasing my skills in full-stack development</h4>
 
       <ProjectCard
-        image="Image Placeholder"
-        description="A web application that allows users to track their tasks and manage their time effectively."
-        techStack={["React", "Node.js", "MongoDB"]}
-        projectURL="https://example.com/project1"
-        githubURL=""
-      />
+      image="Image Placeholder"
+      description="A pet adoption web application that allows users to browse pets, view details, and submit adoption requests, with role-based admin access."
+      techStack={["SvelteKit", "TypeScript", "JWT", "Prisma"]}
+      projectURL=""
+      githubURL="https://github.com/Vasuuu641/Pets"
+    />
 
       <ProjectCard
-        image="Image Placeholder"
-        description="An e-commerce platform that provides a seamless shopping experience with secure payment integration."
-        techStack={["TypeScript", "Express", "MySQL"]}
-        projectURL="https://example.com/project2"
-        githubURL=""
-      />
+      image="Image Placeholder"
+      description="A student–alumni networking platform aimed at strengthening connections through profiles, mentorship opportunities, and community engagement."
+      techStack={["React", "TypeScript", "Node.js", "MySQL"]}
+      projectURL=""
+      githubURL="https://github.com/Vasuuu641/Student_Alumni_Network"
+    />
 
       <ProjectCard
-        image="Image Placeholder"
-        description="A social networking site that connects people with similar interests and facilitates community building."
-        techStack={["Vue.js", "Django", "PostgreSQL"]}
-        projectURL="https://example.com/project3"
-        githubURL=""
-      />
-      
+      image="Image Placeholder"
+      description="A productivity app featuring a gamified Pomodoro timer, task management, and daily reviews to help users build consistent focus habits."
+      techStack={["NestJS", "Prisma", "MySQL", "Docker"]}
+      projectURL=""
+      githubURL="https://github.com/Vasuuu641/Timely_Public"
+    />
+
     </div>
 
   );
