@@ -1,0 +1,107 @@
+/* App container 
+.Portfolio {
+  font-family: Arial, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+ Navbar 
+.NavBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 100;
+}
+
+.NavBar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.NavBar a.hover-accent:hover {
+  color: hsl(var(--accent-primary));
+}
+
+Section base styling 
+section {
+  min-height: 100vh;  full viewport height 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+Section-specific backgrounds 
+.Home { background-color: #f8fafc; }
+.About { background-color: #e2e8f0; }
+.Projects { background-color: #cbd5e1; }
+.Connect { background-color: #94a3b8; }
+
+ Headings 
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+Buttons 
+.Primary.Button {
+  background-color: hsl(var(--accent-primary), 80%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.Primary.Button:hover {
+  background-color: hsl(var(--accent-primary), 60%);
+  transform: translateY(-2px);
+}
+
+Project Cards 
+.ProjectCard {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ProjectCard img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.ProjectCard .Links {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+*/

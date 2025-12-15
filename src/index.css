@@ -1,13 +1,83 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ==========================
+   Tailwind Base
+========================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================
+   Reset & Global Styles
+========================== */
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+               "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+               sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+/* ==========================
+   Dark Mode Colors (Homepage)
+========================== */
+:root {
+  --background: 271 100% 20%;       /* Very dark purple */
+  --foreground: 0 0% 98%;           /* near-white text */
+  --accent: 285 85% 65%;            /* bright purple for highlights */
+  --accent-hover: 285 85% 75%;      /* lighter purple for hover effects */
+}
+
+.dark {
+  --background: 271 100% 20%;
+  --foreground: 0 0% 98%;
+  --accent: 285 85% 65%;
+  --accent-hover: 285 85% 75%;
+}
+
+
+
+/* ==========================
+   Hero Section (Home)
+========================== */
+.Home {
+  /* Only minimal styling here; layout, spacing, typography handled by Tailwind */
+}
+
+/* Text highlights */
+.Home h1 span {
+  color: hsl(var(--accent));
+}
+
+/* Links inside Home */
+.Home a {
+  text-decoration: none;
+}
+
+/* Scrollbar (optional for homepage) */
+.Home::-webkit-scrollbar {
+  width: 10px;
+}
+
+.Home::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.Home::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 5px;
+}
+
+.Home::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent-hover));
 }
