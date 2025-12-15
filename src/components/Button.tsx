@@ -20,7 +20,7 @@ export default function Button({ text, variant = "primary", size = "default", ic
 
   // Variant
   if (variant === "outline") {
-    baseClasses += " border-2 border-[hsl(var(--accent))] text-[hsl(var(--foreground))] bg-transparent hover:bg-[hsl(var(--accent)/0.2)]";
+    baseClasses += " border-2 border-[hsl(var(--accent))] text-[hsl(var(--foreground))] hover:bg-[hsl(var(--accent-hover))] hover:-translate-y-1 bg-transparent hover:bg-[hsl(var(--accent)/0.2)]";
   } else {
     baseClasses += " bg-[hsl(var(--accent))] text-white hover:bg-[hsl(var(--accent-hover))] hover:-translate-y-1";
   }
