@@ -1,30 +1,34 @@
+import { ReactNode } from "react";
+
 type ButtonProps = {
   text: string;
-  variant?: "primary" | "outline";
-  icon?: React.ReactNode;
+  variant?: "primary" | "outline"; // filled or border
+  size?: "default" | "small";      // homepage vs skill button
+  icon?: ReactNode;                // optional icon
 };
 
-export default function Button({
-  text,
-  variant = "primary",
-  icon,
-}: ButtonProps) {
+export default function Button({ text, variant = "primary", size = "default", icon }: ButtonProps) {
+  // Base classes
+  let baseClasses = "font-medium transition-all duration-300 flex items-center justify-center gap-2";
+
+  // Size
+  if (size === "small") {
+    baseClasses += " px-6 py-3.5 text-sm rounded-md"; // About page
+  } else {
+    baseClasses += " px-6 py-3 rounded-full text-lg"; // Homepage: fully rounded
+  }
+
+  // Variant
+  if (variant === "outline") {
+    baseClasses += " border-2 border-[hsl(var(--accent))] text-[hsl(var(--foreground))] bg-transparent hover:bg-[hsl(var(--accent)/0.2)]";
+  } else {
+    baseClasses += " bg-[hsl(var(--accent))] text-white hover:bg-[hsl(var(--accent-hover))] hover:-translate-y-1";
+  }
+
   return (
-    <button
-      className={`
-        inline-flex items-center gap-3
-        px-10 py-5 rounded-full
-        font-semibold text-lg md:text-xl
-        transition-all duration-300
-        ${
-          variant === "primary"
-            ? "bg-[hsl(var(--accent))] text-white hover:bg-[hsl(var(--accent-hover))] hover:-translate-y-1 hover:shadow-lg hover:shadow-[hsl(var(--accent)/0.4)]"
-            : "border-2 border-[hsl(var(--accent))] text-white bg-transparent hover:bg-[hsl(var(--accent))] hover:-translate-y-1 hover:shadow-lg hover:shadow-[hsl(var(--accent)/0.4)]"
-        }
-      `}
-    >
+    <button className={baseClasses}>
+      {icon && <span>{icon}</span>}
       {text}
-      {icon}
     </button>
   );
 }

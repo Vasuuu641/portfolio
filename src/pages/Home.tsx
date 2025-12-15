@@ -7,7 +7,7 @@ function Home()
     return (
         
         <section id="home"
-         className="Home min-h-screen flex flex-col justify-start items-center pt-40 px-6 md:px-16 lg:px-32 text-center md:text-left bg-[hsl(var(--background))] text-[hsl(var(--foreground))]"
+         className="min-h-screen flex flex-col justify-center items-center px-6 md:px-16 lg:px-32 bg-[hsl(var(--bg-dark-2))] text-[hsl(var(--foreground))]"
          >
 
             <p className="text-base md:text-lg lg:text-xl

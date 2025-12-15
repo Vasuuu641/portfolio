@@ -31,11 +31,11 @@ body {
 /* ==========================
    Dark Mode Colors (Homepage)
 ========================== */
-:root {
-  --background: 271 100% 20%;       /* Very dark purple */
-  --foreground: 0 0% 98%;           /* near-white text */
-  --accent: 285 85% 65%;            /* bright purple for highlights */
-  --accent-hover: 285 85% 75%;      /* lighter purple for hover effects */
+/*:root {
+  --background: 271 100% 20%;       
+  --foreground: 0 0% 98%;          
+  --accent: 285 85% 65%;           
+  --accent-hover: 285 85% 75%;      
 }
 
 .dark {
@@ -44,15 +44,24 @@ body {
   --accent: 285 85% 65%;
   --accent-hover: 285 85% 75%;
 }
+*/
 
+:root {
+  /* Base dark purple theme */
+  --foreground: 0, 0%, 98%;  /* text color stays near-white for readability */
+  --accent: 285, 85%, 65%;   /* bright purple highlights */
+  --accent-hover: 285, 85%, 75%; 
+
+  /* Alternating backgrounds for sections */
+  --bg-dark-1: 271, 100%, 18%;   /* darkest shade */
+  --bg-dark-2: 271, 100%, 23%;   /* slightly lighter shade */
+}
 
 
 /* ==========================
    Hero Section (Home)
 ========================== */
-.Home {
-  /* Only minimal styling here; layout, spacing, typography handled by Tailwind */
-}
+
 
 /* Text highlights */
 .Home h1 span {
