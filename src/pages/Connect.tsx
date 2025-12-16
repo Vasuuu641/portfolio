@@ -19,13 +19,27 @@ function Connect() {
 
       {/* Cards container */}
      <div className="flex flex-wrap justify-center gap-12">
-  <ConCard icon={FaEnvelope} name="Email" info="vasundhararavi641@gmail.com" href="mailto:vasundhararavi641@gmail.com" />
-  <ConCard icon={FaLinkedin} name="LinkedIn" info="linkedin.com/in/vasundhararavi" href="https://www.linkedin.com/in/vasundhararavikumar/" />
-  <ConCard icon={FaGithub} name="GitHub" info="github.com/Vasuuu641" href="https://github.com/Vasuuu641" />
+  <ConCard 
+  icon={FaEnvelope} 
+  name="Email" 
+  info="vasundhararavi641@gmail.com" 
+  copyText = "vasundhararavi641@gmail.com" 
+  />
+
+  <ConCard 
+  icon={FaLinkedin} 
+  name="LinkedIn" 
+  info="linkedin.com/in/vasundhararavi" 
+  href = "https://www.linkedin.com/in/vasundhararavikumar/" 
+  />
+  <ConCard 
+  icon={FaGithub} 
+  name="GitHub" 
+  info="github.com/Vasuuu641" 
+  href = "https://github.com/Vasuuu641" 
+  />
 </div>
 
-
-      {/* Optional button */}
       <div className="mt-12">
         <Button text="Get in touch" />
       </div>
