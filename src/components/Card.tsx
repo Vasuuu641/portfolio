@@ -1,67 +1,61 @@
 import { Github, ExternalLink } from "lucide-react";
+import type { Project } from "../types/Project";
 
 type ProjectCardProps = {
-  image: string;
-  description: string;
-  techStack: string[];
-  projectURL: string;
-  githubURL: string;
+  project: Project;
+  onView: (project: Project) => void;
 };
 
-export default function ProjectCard({
-  image,
-  description,
-  techStack,
-  projectURL,
-  githubURL,
-}: ProjectCardProps) {
+export default function ProjectCard({ project, onView }: ProjectCardProps) {
   return (
-    <div className="group relative w-full max-w-sm overflow-hidden rounded-2xl bg-[hsl(var(--bg-dark-1))] shadow-lg transition-transform duration-300 hover:-translate-y-2">
-      
-      {/* Image */}
-      <div className="relative h-56 overflow-hidden">
+    <div className="group rounded-xl overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-lg transition-all cursor-pointer">
+      {/* Image section */}
+      <div className="relative h-48 md:h-56 lg:h-64 overflow-hidden">
         <img
-          src={image}
-          alt="Project preview"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
 
-        {/* Overlay icons */}
-        <div className="absolute bottom-3 left-3 flex gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          {projectURL && (
-            <a
-              href={projectURL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-black/60 p-2 text-white backdrop-blur hover:bg-black/80"
-            >
-              <ExternalLink size={16} />
-            </a>
-          )}
-
+        {/* Hover overlay */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+          {/* GitHub */}
           <a
-            href={githubURL}
+            href={project.githubURL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-black/60 p-2 text-white backdrop-blur hover:bg-black/80"
+            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition"
+            onClick={(e) => e.stopPropagation()}
           >
-            <Github size={16} />
+            <Github className="w-5 h-5 text-white" />
           </a>
+
+          {/* View */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onView(project);
+            }}
+            className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition"
+          >
+            <ExternalLink className="w-5 h-5 text-white" />
+          </button>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="p-5">
-        <p className="mb-4 text-sm text-[hsl(var(--foreground))]/80">
-          {description}
+      {/* Info section */}
+      <div className="p-4">
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+          {project.title}
+        </h3>
+        <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 mt-1">
+          {project.description}
         </p>
-
-        {/* Tech stack */}
-        <div className="flex flex-wrap gap-2">
-          {techStack.map((tech) => (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="rounded-md border border-[hsl(var(--accent))]/40 px-2 py-1 text-xs text-[hsl(var(--accent))]"
+              className="px-2 py-1 text-xs bg-slate-200 dark:bg-slate-700 rounded"
             >
               {tech}
             </span>

@@ -11,7 +11,7 @@ function About()
         >
              <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-                 <div className="flex justify-center md : justify-start">
+                 <div className="flex justify-center md:justify-start">
                  <img
                  src={image}
                  alt="Vasundhara Ravikumar"
