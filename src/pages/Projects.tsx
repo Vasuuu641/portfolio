@@ -74,7 +74,6 @@ function Projects() {
       {activeProject && (
         <ProjectDetailModal
           project={projects[activeProject]}
-          isOpen={!!activeProject}
           onClose={() => setActiveProject(null)}
         />
       )}
