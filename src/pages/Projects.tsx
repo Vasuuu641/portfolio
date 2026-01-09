@@ -3,25 +3,12 @@ import { useState } from "react";
 import ProjectDetailModal from "../components/ProjectDetailModal";
 import type { Project } from "../types/Project";
 
-type ProjectKey = "pets" | "students" | "timely" | null;
+type ProjectKey = "students" | "timely" | null;
 
 function Projects() {
   const [activeProject, setActiveProject] = useState<ProjectKey>(null);
 
   const projects: Record<NonNullable<ProjectKey>, Project> = {
-    pets: {
-      id: "pets",
-      image: "/pets.png",
-      description:
-        "A pet adoption web application that allows users to browse pets, view details, and submit adoption requests, with role-based admin access.",
-      techStack: ["SvelteKit", "TypeScript", "JWT", "Prisma"],
-      githubURL: "https://github.com/Vasuuu641/Pets",
-      title: "Pet Adoption App", // optional, used in modal
-      overview: "A comprehensive pet adoption platform",
-      design: "Modern and user-friendly interface",
-      development: "Full-stack development with authentication",
-      challenges: "Implementing role-based access control",
-    },
     students: {
       id: "students",
       image: "/students.png",
@@ -53,8 +40,16 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-start items-center px-6 md:px-16 lg:px-32 pt-24 bg-[hsl(var(--bg-dark-2))] text-[hsl(var(--foreground))]"
+      className="min-h-screen relative bg-[hsl(var(--bg-dark-2))] text-[hsl(var(--foreground))]"
     >
+
+       <div
+    className={`
+      transition-all duration-300
+      ${activeProject ? "blur-md brightness-75 scale-[0.98]" : ""}
+    `}
+  >
+     <div className="flex flex-col items-center px-6 md:px-16 lg:px-32 pt-24">
       <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
         Featured Projects
       </h1>
@@ -65,9 +60,10 @@ function Projects() {
       </h4>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
-        <ProjectCard project={projects.pets} onView={() => setActiveProject("pets")} />
         <ProjectCard project={projects.students} onView={() => setActiveProject("students")} />
         <ProjectCard project={projects.timely} onView={() => setActiveProject("timely")} />
+      </div>
+      </div>
       </div>
 
       {/* Modal */}

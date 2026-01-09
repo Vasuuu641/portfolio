@@ -24,7 +24,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center">
       <div className="
       w-full max-w-4xl rounded-xl p-6 relative
       bg-gradient-to-b
