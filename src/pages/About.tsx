@@ -17,25 +17,27 @@ function About()
                  alt="Vasundhara Ravikumar"
                  className="
                  h-full
-                 max-h-[650px]   /* limits it so it doesn't get too tall */
+                 max-h-[650px]
                  object-cover
-                 rounded-2xl
-                 border-2 border-[hsl(var(--accent))]
-                 shadow-lg shadow-[hsl(var(--accent)/0.4)]"    
+                 shadow-sm
+                 rounded-xl
+                 border border-[hsl(var(--border-default))]"   
                  />
                  </div>
 
             <div className="flex flex-col justify-start">
-                 <h1 className="text-5xl md:text-6xl font-extrabold mb-6">
-                    About Me
-                 </h1>
-                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-                I’m a Computer Science and Engineering student with a strong interest 
-                in building practical, user-focused software. I enjoy working on full-stack 
-                projects where I can turn ideas into clean, interactive experiences, and I’m especially drawn to projects 
-                that solve real problems or improve everyday workflows. I like learning by building, experimenting with modern 
-                frameworks, and gradually refining my code to be more efficient, modular, and scalable. As I grow as a developer, 
-                I’m eager to work on software that blends thoughtful design with solid engineering.
+                <h1 className="text-4xl md:text-5xl font-bold mb-6"> About </h1>
+ 
+                <p className="text-base md:text-lg text-[hsl(var(--foreground-muted))] leading-relaxed mb-6">
+                I’m a Computer Science and Engineering student focused on building practical,
+                user-focused software. I enjoy full-stack projects where I can turn ideas into
+                clean, functional interfaces backed by reliable systems.
+                </p>
+
+                <p className="text-base md:text-lg text-[hsl(var(--foreground-muted))] leading-relaxed mb-8">
+                I like learning by building, experimenting with modern tools, and refining my
+                code to be more modular, maintainable, and scalable. I’m especially interested
+                in projects that solve real problems or improve everyday workflows.
                 </p>
 
                 <h4 className="text-2xl font-semibold mb-4">
@@ -54,7 +56,10 @@ function About()
                 "Git",
                 "HTML & CSS",
                  ].map((skill) => (
-              <Button key={skill} text={skill} variant="outline" size = "small"/>
+              <span key={skill} className="px-3 py-1.5 text-sm rounded-md border border-[hsl(var(--border-subtle))] text-[hsl(var(--foreground-muted))]">
+                {skill}
+              </span>
+
               ))}
                  </div>
             </div>

@@ -1,92 +1,64 @@
-/* ==========================
-   Tailwind Base
-========================== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ==========================
-   Reset & Global Styles
+   Global Reset
 ========================== */
 html {
   scroll-behavior: smooth;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-               "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-               sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 }
 
 /* ==========================
-   Dark Mode Colors (Homepage)
+   Dark Theme Tokens
 ========================== */
-/*:root {
-  --background: 271 100% 20%;       
-  --foreground: 0 0% 98%;          
-  --accent: 285 85% 65%;           
-  --accent-hover: 285 85% 75%;      
-}
-
-.dark {
-  --background: 271 100% 20%;
-  --foreground: 0 0% 98%;
-  --accent: 285 85% 65%;
-  --accent-hover: 285 85% 75%;
-}
-*/
-
 :root {
-  /* Base dark purple theme */
-  --foreground: 0, 0%, 98%;  /* text color stays near-white for readability */
-  --accent: 285, 85%, 65%;   /* bright purple highlights */
-  --accent-hover: 285, 85%, 75%; 
+  /* Base */
+  --bg-dark-1: 220 10% 6%;
+  --bg-dark-2: 220 10% 9%;
+  --bg-dark-3: 220 10% 13%;
 
-  /* Alternating backgrounds for sections */
-  --bg-dark-1: 271, 100%, 18%;   /* darkest shade */
-  --bg-dark-2: 271, 100%, 23%;   /* slightly lighter shade */
+  --background: var(--bg-dark-1);
+
+  /* Text */
+  --foreground: 0 0% 94%;
+  --foreground-muted: 220 6% 70%;
+  --foreground-subtle: 220 6% 55%;
+
+  /* Borders */
+  --border-subtle: 220 10% 18%;
+  --border-default: 220 10% 22%;
+
+  /* Accent */
+  --accent: 330 65% 65%;
+  --accent-muted: 330 40% 55%;
+  --accent-hover: 330 65% 72%;
 }
-
 
 /* ==========================
-   Hero Section (Home)
+   Utility Classes
 ========================== */
-
-
-/* Text highlights */
-.Home h1 span {
-  color: hsl(var(--accent));
+.text-muted {
+  color: hsl(var(--foreground-muted));
 }
 
-/* Links inside Home */
-.Home a {
-  text-decoration: none;
+.text-subtle {
+  color: hsl(var(--foreground-subtle));
 }
 
-/* Scrollbar (optional for homepage) */
-.Home::-webkit-scrollbar {
-  width: 10px;
-}
-
-.Home::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.Home::-webkit-scrollbar-thumb {
-  background: hsl(var(--accent));
-  border-radius: 5px;
-}
-
-.Home::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent-hover));
+.bg-surface {
+  background-color: hsl(var(--bg-dark-3));
 }

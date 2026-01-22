@@ -5,7 +5,17 @@ export type Project = {
   description: string;
   techStack: string[];
   githubURL: string;
-  overview: string;
+
+  overview: {
+    title: string;
+    description: string;
+    stats: { label: string; value: string }[];
+    timeline: string;
+    role: string;
+    liveDemoURL?: string;
+    githubURL?: string;
+  };
+
   design: string;
   development: string;
   challenges: string;

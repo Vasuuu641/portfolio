@@ -15,8 +15,7 @@ export default function ProjectCard({ project, onView }: ProjectCardProps) {
     bg-[hsl(var(--bg-dark-2))]
     border border-[hsl(var(--accent)/0.3)]
     hover:border-[hsl(var(--accent))]
-    shadow-none
-    hover:shadow-[0_25px_50px_-12px_hsl(var(--accent)/0.55)]
+    shadow-sm hover:shadow-md shadow-black/50
     transition-all duration-300
     hover:-translate-y-1
 

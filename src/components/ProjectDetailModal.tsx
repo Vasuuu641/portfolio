@@ -2,6 +2,7 @@ import { X } from "lucide-react";
 import { useState } from "react";
 import type { Project } from "../types/Project";
 import { Info, Palette, Code, AlertTriangle } from "lucide-react";
+import ProjectOverview from "./projectOverviewProps";
 
 
 type ProjectModalProps = {
@@ -109,7 +110,17 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         {/* Content */}
         <div className="text-neutral-300 leading-relaxed">
-          {activeTab === "overview" && project.overview}
+          {activeTab === "overview" && (
+          <ProjectOverview
+          title={project.overview.title}
+          description={project.overview.description}
+          stats={project.overview.stats}
+          timeline={project.overview.timeline}
+          role={project.overview.role}
+          liveDemoURL={project.overview.liveDemoURL}
+          githubURL={project.githubURL}
+          />
+  )}
           {activeTab === "design" && project.design}
           {activeTab === "development" && project.development}
           {activeTab === "challenges" && project.challenges}
